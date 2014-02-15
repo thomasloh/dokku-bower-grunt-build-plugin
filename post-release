@@ -4,7 +4,6 @@ APP="$1"; IMAGE="app/$APP"
 echo "-----> Building Node app ..."
 COMMAND=$(cat <<EOF
 cd "\$DOKKU_ROOT/\$APP" &&
-server/prepare_dist &&
 npm update &&
 bower install &&
 bower update &&
